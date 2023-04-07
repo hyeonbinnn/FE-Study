@@ -1,0 +1,39 @@
+p {
+  font-size: 20px;
+}
+
+.one {
+  font-size: 20px;
+}
+
+.two {
+  font-size: 20px;
+}
+
+.three {
+  font-size: 20px;
+}
+
+.four {
+  font-size: 2px;
+}
+
+.five {
+  font-size: 2px;
+}
+
+.status-bar {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+td::after {
+  content: "Heades up!";
+}
+
+p {
+  letter-spacing: 0.5rem;
+}
+
+.test {
+  letter-spacing: 1rem;
+}/*# sourceMappingURL=004_Operator.css.map */
