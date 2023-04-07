@@ -1,0 +1,136 @@
+// * variable
+// 변수를 선언한다는 것은 값을 일일이 고치지 않아도 된다는 의미 (유지보수 용이)
+// 무분별하게는 작성 금지, 타당한 이유가 있는 변수들만 먼저 생성
+
+// * 변수를 사용하는 기준
+// 값이 두 번 이상 반복된다면 미리 변수로 만들기 (값을 기억하지 않고 변수명만을 가지고 스타일 가능
+// 기존의 값을 다른 값으로 변경해야할 경우, 변수의 값만 변경하면 되기 때문에 값이 수정될 가능성이 있다면 변수 생성을 고려
+// 보통 타이포그래피, 폰트색상, 폰트사이즈, 글자 간격 등의 값을 변수로 정의
+
+// * 변수 생성하기
+// $ 기호를 사용하셔서 스타일을 적용할 값(색상, 폰트 사이즈, 이미지url)을 저장
+
+// * 색상
+$red: #ee4444;
+$black: #222;
+$bg-color: #3e5e9e;
+$link-color: red;
+$p-color: #282a36;
+
+// 폰트사이즈
+$font-p: 13px;
+$font-h1: 28px;
+
+// 폰트
+$base-font: "Noto Sans KR", sans-serif;
+
+body {
+  background-color: $bg-color;
+  font-size: $font-p;
+  font-family: $base-font;
+}
+
+h1 {
+  font-size: $font-h1;
+  color: $black;
+}
+
+p {
+  font-size: $font-p;
+  color: $black;
+}
+
+// * 변수 type
+// numbers, strings, color, booleans, lists, maps, null
+
+// * String
+$path: "./assets/img/";
+$name: "background.png";
+
+.test {
+  background-image: url($path + $name);
+}
+
+// * lists
+// 리스트는 순서가 있는 값으로, 값마다 인덱스를 가짐
+// lists의 요소들을 쉼표, 공백 또는 일관성이 있는 /로 구분하여 생성
+// 다른 타입의 변수들과 다르게 특수 괄호를 사용하지 않아도 lists로 인식
+// 빈 lists를 만들 때나 lists에 들어있는 값이 하나 인 경우 [ ] 나 ( ) 를 사용하여 생성
+// lists에 들어있는 값의 index는 0부터 시작하지 않고 1부터 시작
+$sizes: 40px, 50px, 80px;
+$valid-sides: top, bottom, left, right;
+$image-file: photo_01, photo_02, photo_03;
+
+// * maps
+// ( ) 괄호 안에 키:값의 형태로 저장하여 사용
+// 키는 고유해야 하지만 키에 해당하는 값은 중복이 가능
+// 변수를 각각 선언하는 대신, 관련 있는 변수들을 한번에 모아 maps로 만들어서 사용 가능
+$font-sizes: (
+  "h1": 45px,
+  "h2": 19px,
+  "p": 16px,
+);
+
+$font-sizes-test: (
+  "one": #fff,
+  "two": #ff0,
+  "three": #f00,
+);
+
+.title {
+  font-size: nth($sizes, 1);
+}
+// map-get을 사용하여 map안에 있는 키에 해당되는 값을 불러옴
+.title2 {
+  font-size: map-get($font-sizes, "h2");
+}
+
+.title3 {
+  font-size: map-get($font-sizes-test, "three");
+}
+
+.title4 {
+  font-size: nth($sizes, -1);
+}
+
+// lists와 maps 뿐만 아니라 string이나 number같은 타입들도 function을 가지고 있음
+
+// * 변수의 Scope (변수의 유효범위)
+// 전역변수와 지역변수
+
+// * 지역변수
+// 선언한 자기자신을 감싸고 있는 중괄호 { } 안에서 사용
+// 하위 단계에 있는 중괄호에서도 사용 가능
+.one {
+  $value: red; // 지역변수
+  color: $value;
+
+  .three {
+    background-color: $value;
+  }
+}
+
+.info {
+  $line-normal: 1.34; // 지역변수
+  font-size: 15px;
+  line-height: $line-normal;
+  text-align: right;
+  span {
+    line-height: $line-normal;
+  }
+}
+
+// * 전역변수
+// 가장 윗부분에 정의하면 파일 내에 어디서든지 사용 가능
+// 파일로 만들어서 사용하는 경우, 메인 scss파일(파일분할부분에서 설명한 style.scss파일)에서 전역변수파일을 다른 파일들보다 윗부분에 위치시킴
+$font-p: 15px; // 전역변수
+.main-box {
+  p {
+    font-size: $font-p;
+  }
+  a {
+    font-size: $font-p;
+    color: blue;
+    text-decoration: none;
+  }
+}

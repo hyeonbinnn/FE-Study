@@ -1,0 +1,113 @@
+// '&'는 상위에 있는 부모선택자를 가리킴
+
+// .box {
+//     &:focus{} // 가상선택자
+//     &:hover{}
+//     &:active{}
+//     &:first-child{}
+//     &:nth-child(2){}
+//     &::after{} // 가상요소
+//     &::before{}
+// }
+
+// * 1)
+// li 태그의 가상요소와 가상클래스에게 스타일을 적용한 예시
+// &을 사용하여 li와 :hover, :last-child를 연결
+ul {
+  li {
+    &:hover {
+      // 가상요소
+      background-color: white;
+      cursor: pointer;
+    }
+    &:last-child {
+      // 가상클래스
+      border: 2px solid black;
+    }
+  }
+}
+
+// * 2)
+// &를 응용하면 공통 클래스 명을 가진 선택자들 중첩 가능
+// .box라는 이름이 같기 때문에 &를 사용해 중첩구조 가능
+.box {
+  &-yellow {
+    background: #ff6347;
+  }
+  &-red {
+    background: #ffd700;
+  }
+  &-green {
+    background: #9acd32;
+  }
+}
+
+ol {
+  border: 1px solid black;
+
+  li {
+    &:nth-child(1) {
+      color: red;
+    }
+    &:nth-child(2) {
+      color: green;
+    }
+    &:nth-child(3) {
+      color: blue;
+    }
+  }
+}
+
+// * 3)
+// & 은 자신의 부모 선택자를 참조하지만 중첩이 깊어지면, 자신의 직계 부모가 아닌 최상위 부모 선택자로부터 참조
+// 중첩을 과하게 사용하지 않도록 주의
+.nav {
+  height: 60px;
+  font-size: 18px;
+  .nav-list {
+    background: #3e68ff;
+    span {
+      padding: 10px 13px;
+      a {
+        color: white;
+        .one {
+          & .two {
+            color: skyblue;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! @at-root
+// 중첩에서 벗어나고 싶을 때 사용
+.one {
+  color: green;
+
+  .two {
+    color: blue;
+
+    .three {
+      color: pink;
+
+      @at-root .four {
+        color: red;
+      }
+    }
+  }
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  .article-content {
+    font-size: 14px;
+    opacity: 0.7;
+    @at-root i {
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+nav {
+  background: #c39bd3;
+  padding: 10px;
+  height: 50px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+nav ul li {
+  color: white;
+  margin-right: 10px;
+}
+
+.one {
+  color: blue;
+}
+.one .two {
+  color: green;
+}
+.one .two .three {
+  color: red;
+}
+
+.add-icon {
+  background-image: url("./assets/arrow-right-solid.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}/*# sourceMappingURL=001_Nesting.css.map */
