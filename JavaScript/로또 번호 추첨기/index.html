@@ -10,9 +10,9 @@
   <body>
     <h1>로또 번호 추첨기</h1>
     <script>
-      var lotto = [];
+      const lotto = [];
       while (lotto.length < 6) {
-        var num = parseInt(Math.random() * 45 + 1);
+        const num = parseInt(Math.random() * 45 + 1);
         if (lotto.indexOf(num) == -1) {
           lotto.push(num);
         }
