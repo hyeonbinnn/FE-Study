@@ -1,59 +1,10 @@
-## ✔️ 데이터 상자 만들기
-1. 데이터가 `'김대한', 30, 1.2, true` 라고 하면 어떤 의미인지 모름   
-2. 프로그래밍에서는 데이터, 값들을 이름표가 붙은 상자에 담아서 어떤 의미인지 쉽게 알 수 있도록 함   
-3. `변수(variable)` → 자바스크립트에서는 앞글자 `va`r을 사용해서 데이터 상자를 만듦   
-```javascript
-// var 변수명 = 값
-var name = '김대한';
-var age = 30;
-var eyesight = 1.2;
-var single = true;
-
-// ES6 문법 변수 선언
-let 변수명 = 값;
-const 변수명 = 값;
-```
-<br>
-
-## 📍 자료형
-### 문자열(String)  
-- 큰따옴표("), 작은따옴표(') 사용
-```
-"김대한"
-'김대한'
-```
-### 숫자(int, float)
-- 따옴표 없이 표기한 숫자
-```
-정수형(int) - 30
-실수형(float) - 1.2
-```
-### 불(bool)
-- 참 또는 거짓의 값을 가지는 자료형
-```
-true
-false
-```
-### 데이터 자료형 알아내는 방법
-
-```javascript
-// 입력
-var name = "김대한";
-document.write(typeof name);
-
-// 출력
-string
-```
-
-<br>
-
 ## 1. 로또 번호 추첨기
 ### 공 1개부터 뽑아보자
 - 자바스크립트에서 임의의 숫자를 만드는 방법 `Math.randon();`  
 => 0이상 ~ 1미만 실수(float)  
 ```javascript
 // 입력
-var num = Math.random();
+const num = Math.random();
 document.write(num);
 
 // 출력(누를 때마다 바뀜)
@@ -76,8 +27,8 @@ document.write(num);
 
 ```javascript
 // 입력
-var num = Math.random() * 45 + 1;
-var ball1 = parseInt(num);
+const num = Math.random() * 45 + 1;
+const ball1 = parseInt(num);
 document.write(ball1);
 
 // 출력(누를 때마다 바뀜)
@@ -89,7 +40,7 @@ document.write(ball1);
 ### 공 6개 뽑아보자
 - 배열(Array) 사용하면 하나의 변수 안에 여러 개의 값들을 넣을 수 있음
 ```javascript
-var lotto = [1,2,3,4,5,6];
+const lotto = [1,2,3,4,5,6];
 
 // 값을 꺼낼 때
 변수이름[위치번호(인덱스)] = lotto[0]
@@ -99,7 +50,7 @@ var lotto = [1,2,3,4,5,6];
 - 3가져오기
 ```javascript
 // 입력
-var lotto = [1, 2, 3, 4, 5, 6];
+const lotto = [1, 2, 3, 4, 5, 6];
 document.write(lotto[2]);
 
 // 출력
@@ -110,7 +61,7 @@ document.write(lotto[2]);
 - 마지막 값 추가하기 `.push()`
 ```javascript
 // 입력
-var lotto = [1, 2, 3, 4, 5, 6];
+const lotto = [1, 2, 3, 4, 5, 6];
 lotto.push(7);
 document.write(lotto);
 
@@ -161,7 +112,7 @@ for (var i=0; i < 6; i++) {
 - 반복문(for) 이용해서 임의의 숫자 6개 뽑기
 ```javascript
 // 입력
-var lotto = [];
+const lotto = [];
 for (var i = 0; i < 6; i++) {
   lotto.push(parseInt(Math.random() * 45 + 1));
 }
@@ -187,9 +138,9 @@ if (조건) {
   → 배열 안에 값이 없을 때만 .push 해주기  
 ```javascript
 // 입력
-var lotto = [];
+const lotto = [];
 for (var i = 0; i < 6; i++) {
-    var num = parseInt(Math.random() * 45 + 1);
+    const num = parseInt(Math.random() * 45 + 1);
     if (lotto.indexOf(num) == -1) {
         lotto.push(num);
     }
@@ -218,9 +169,9 @@ while (조건) {
 - 배열의 길이 `.length`를 이용해 배열의 값이 6개를 넘어가면 반복문을 종료하는 조건 추가
 ```javascript
 // 입력
-var lotto = [];
+const lotto = [];
 while (lotto.length < 6) {
-      var num = parseInt(Math.random() * 45 + 1);
+      const num = parseInt(Math.random() * 45 + 1);
       if (lotto.indexOf(num) == -1) {
           lotto.push(num);
       }
@@ -237,7 +188,7 @@ document.write(lotto);
   → 배열 값 정렬 `.sort()`
 ```javascript
 // 입력
-var lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
+const lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
 lotto.sort();
 document.write(lotto);
 
@@ -250,7 +201,7 @@ document.write(lotto);
   → `.sort((a, b) => a - b)`
 ```javascript
 // 입력
-var lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
+const lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
 lotto.sort((a, b) => a - b);
 document.write(lotto);
 
@@ -263,7 +214,7 @@ document.write(lotto);
   → `.sort((a, b) => b - a)`
 ```javascript
 // 입력
-var lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
+const lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
 lotto.sort((a, b) => b - a);
 document.write(lotto);
 
@@ -275,9 +226,9 @@ document.write(lotto);
 - 로또 번호 순서 오름차순 정렬하기  
 ```javascript
 // 입력
-var lotto = [];
+const lotto = [];
 while (lotto.length < 6) {
-      var num = parseInt(Math.random() * 45 + 1);
+      const num = parseInt(Math.random() * 45 + 1);
       if (lotto.indexOf(num) == -1) {
           lotto.push(num);
       }
