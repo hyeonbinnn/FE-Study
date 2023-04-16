@@ -103,7 +103,7 @@ document.write(lotto);
 for (시작; 끝; 증가) {
   반복하려는 코드
 }
-for (var i=0; i < 6; i++) {
+for (const i=0; i < 6; i++) {
   반복하려는 코드
 }
 ```
@@ -113,7 +113,7 @@ for (var i=0; i < 6; i++) {
 ```javascript
 // 입력
 const lotto = [];
-for (var i = 0; i < 6; i++) {
+for (const i = 0; i < 6; i++) {
   lotto.push(parseInt(Math.random() * 45 + 1));
 }
 document.write(lotto);
@@ -139,7 +139,7 @@ if (조건) {
 ```javascript
 // 입력
 const lotto = [];
-for (var i = 0; i < 6; i++) {
+for (const i = 0; i < 6; i++) {
     const num = parseInt(Math.random() * 45 + 1);
     if (lotto.indexOf(num) == -1) {
         lotto.push(num);
