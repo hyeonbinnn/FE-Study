@@ -73,7 +73,7 @@ document.write(lotto);
 - 임의의 숫자 6개를 담은 배열 만들기
 ```javascript
 // 입력
-var lotto = [];
+const lotto = [];
 lotto.push(parseInt(Math.random() * 45 + 1));
 lotto.push(parseInt(Math.random() * 45 + 1));
 lotto.push(parseInt(Math.random() * 45 + 1));
