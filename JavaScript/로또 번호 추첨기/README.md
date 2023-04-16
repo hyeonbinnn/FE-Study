@@ -4,13 +4,12 @@
 => 0이상 ~ 1미만 실수(float)  
 ```javascript
 // 입력
-const num = Math.random();
+let num = Math.random();
 document.write(num);
 
 // 출력(누를 때마다 바뀜)
 0.5551057775278314
 ```
-
 <br>
 
 - 1부터 45까지 숫자 만들기 `Math.randon() * 45;`   
@@ -27,8 +26,8 @@ document.write(num);
 
 ```javascript
 // 입력
-const num = Math.random() * 45 + 1;
-const ball1 = parseInt(num);
+let num = Math.random() * 45 + 1;
+let ball1 = parseInt(num);
 document.write(ball1);
 
 // 출력(누를 때마다 바뀜)
@@ -40,7 +39,7 @@ document.write(ball1);
 ### 공 6개 뽑아보자
 - 배열(Array) 사용하면 하나의 변수 안에 여러 개의 값들을 넣을 수 있음
 ```javascript
-const lotto = [1,2,3,4,5,6];
+let lotto = [1,2,3,4,5,6];
 
 // 값을 꺼낼 때
 변수이름[위치번호(인덱스)] = lotto[0]
@@ -50,7 +49,7 @@ const lotto = [1,2,3,4,5,6];
 - 3가져오기
 ```javascript
 // 입력
-const lotto = [1, 2, 3, 4, 5, 6];
+let lotto = [1, 2, 3, 4, 5, 6];
 document.write(lotto[2]);
 
 // 출력
@@ -61,7 +60,7 @@ document.write(lotto[2]);
 - 마지막 값 추가하기 `.push()`
 ```javascript
 // 입력
-const lotto = [1, 2, 3, 4, 5, 6];
+let lotto = [1, 2, 3, 4, 5, 6];
 lotto.push(7);
 document.write(lotto);
 
@@ -73,7 +72,7 @@ document.write(lotto);
 - 임의의 숫자 6개를 담은 배열 만들기
 ```javascript
 // 입력
-const lotto = [];
+let lotto = [];
 lotto.push(parseInt(Math.random() * 45 + 1));
 lotto.push(parseInt(Math.random() * 45 + 1));
 lotto.push(parseInt(Math.random() * 45 + 1));
@@ -103,7 +102,7 @@ document.write(lotto);
 for (시작; 끝; 증가) {
   반복하려는 코드
 }
-for (const i=0; i < 6; i++) {
+for (let i=0; i < 6; i++) {
   반복하려는 코드
 }
 ```
@@ -112,8 +111,8 @@ for (const i=0; i < 6; i++) {
 - 반복문(for) 이용해서 임의의 숫자 6개 뽑기
 ```javascript
 // 입력
-const lotto = [];
-for (const i = 0; i < 6; i++) {
+let lotto = [];
+for (let i = 0; i < 6; i++) {
   lotto.push(parseInt(Math.random() * 45 + 1));
 }
 document.write(lotto);
@@ -138,9 +137,9 @@ if (조건) {
   → 배열 안에 값이 없을 때만 .push 해주기  
 ```javascript
 // 입력
-const lotto = [];
-for (const i = 0; i < 6; i++) {
-    const num = parseInt(Math.random() * 45 + 1);
+let lotto = [];
+for (let i = 0; i < 6; i++) {
+    let num = parseInt(Math.random() * 45 + 1);
     if (lotto.indexOf(num) == -1) {
         lotto.push(num);
     }
@@ -153,7 +152,7 @@ document.write(lotto);
 <br>
 
 ## 5. 로또 번호 추첨기
-❎ 문제 발생 : 만약 중복된 값이 있었다면, 총 6번 뽑는 것 중에 한 번이 안 들어갈 경우가 생겨, `var lotto = [1,2,3,4,5]` 5개 번호만 들어갈 경우도 생김  
+❎ 문제 발생 : 만약 중복된 값이 있었다면, 총 6번 뽑는 것 중에 한 번이 안 들어갈 경우가 생겨, `let lotto = [1,2,3,4,5]` 5개 번호만 들어갈 경우도 생김  
 
 ✅ 해결 방법 : 공을 6번만 뽑는 게 아니라 공이 6개가 될 때까지 반복하기  
 <br>
@@ -161,7 +160,7 @@ document.write(lotto);
 - 반복문(while) 이용해서 공이 6개가 될 때까지 반복하기
 ```javascript
 while (조건) {
-  반복하려는 코
+  반복하려는 코드
 }
 ```
 <br>
@@ -169,9 +168,9 @@ while (조건) {
 - 배열의 길이 `.length`를 이용해 배열의 값이 6개를 넘어가면 반복문을 종료하는 조건 추가
 ```javascript
 // 입력
-const lotto = [];
+let lotto = [];
 while (lotto.length < 6) {
-      const num = parseInt(Math.random() * 45 + 1);
+      let num = parseInt(Math.random() * 45 + 1);
       if (lotto.indexOf(num) == -1) {
           lotto.push(num);
       }
@@ -188,7 +187,7 @@ document.write(lotto);
   → 배열 값 정렬 `.sort()`
 ```javascript
 // 입력
-const lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
+let lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
 lotto.sort();
 document.write(lotto);
 
@@ -201,7 +200,7 @@ document.write(lotto);
   → `.sort((a, b) => a - b)`
 ```javascript
 // 입력
-const lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
+let lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
 lotto.sort((a, b) => a - b);
 document.write(lotto);
 
@@ -214,7 +213,7 @@ document.write(lotto);
   → `.sort((a, b) => b - a)`
 ```javascript
 // 입력
-const lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
+let lotto = [1, 2, 3, 44, 55, 6666, 333, 222];
 lotto.sort((a, b) => b - a);
 document.write(lotto);
 
@@ -226,9 +225,9 @@ document.write(lotto);
 - 로또 번호 순서 오름차순 정렬하기  
 ```javascript
 // 입력
-const lotto = [];
+let lotto = [];
 while (lotto.length < 6) {
-      const num = parseInt(Math.random() * 45 + 1);
+      let num = parseInt(Math.random() * 45 + 1);
       if (lotto.indexOf(num) == -1) {
           lotto.push(num);
       }
