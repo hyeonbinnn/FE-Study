@@ -1,1 +1,1 @@
-## 💻 Frontend School - Study 💻
+## Frontend School - Study
