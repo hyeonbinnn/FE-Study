@@ -1,3 +1,4 @@
+// 일반 함수
 // function sum(a, b) {
 //   console.log(a + b);
 // }
@@ -8,7 +9,7 @@ const sum = function (a, b) {
 };
 sum(10, 20); // 30
 
-// * 화살표 함수
+// # 화살표 함수
 // 명령어가 한 줄일 때, 중괄호 생략해도 자동으로 리턴이 들어감
 const num = (a, b) => a + b;
 console.log(num(10, 20)); //30
