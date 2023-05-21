@@ -42,8 +42,8 @@ aaa(); // 20
 console.log(bbb); // 10
 
 // * 함수와 인자, 매개변수 기본값값
-// 인자 = 함수를 선언할 때의 괄호 안의 값 = 매개변수 = Parameter
-// 인수 = 함수를 호출할 때의 괄호 안의 값 = 전달인자 = Argument
+// # 인자 = 함수를 선언할 때의 괄호 안의 값 = 매개변수 = Parameter
+// # 인수 = 함수를 호출할 때의 괄호 안의 값 = 전달인자 = Argument
 function sum(a, b) {
   console.log(a + b);
 }
