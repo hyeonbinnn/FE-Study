@@ -1,5 +1,5 @@
 // * 배열 요소를 추가, 삭제
-// push(), pop(), unshift(), shift()
+// # push(), pop(), unshift(), shift()
 
 const arr = [1, 2, 3, 4, 5];
 
@@ -17,7 +17,7 @@ arr.shift(); // 앞부분 삭제
 console.log(arr);
 
 // * 주어진 함수를 배열 요소에 각각 실행
-// forEach()
+// # forEach()
 // 원본 배열의 값을 변경하지 않고, 값을 리턴하지도 않음
 
 const arr2 = [1, 2, 3, 4, 5];
@@ -45,14 +45,14 @@ const newArr = arr2.forEach((number, index) => number + 1);
 console.log(newArr); // undefined
 
 // * forEach()와 흡사하게 동작하지만, map()은 새로운 배열을 반환
-// map()
+// # map()
 // 어떤 함수를 이용해 처리한 결과를 저장해야한다면 forEach()가 아니라 map()을 사용
 
 const newArr2 = arr2.map((number, index) => number + 1);
 console.log(newArr2); // [2, 3, 4, 5, 6] 원본 배열 요소에 각각 1씩 더함
 
 // * 배열 요소를 검색
-// includes(), find(), findIndex(),
+// # includes(), find(), findIndex(),
 
 const arr3 = ['hello', 'world'];
 
@@ -65,7 +65,7 @@ console.log(arr4.find((number) => number > 3)); // 4, 주어진 판별 함수를
 console.log(arr4.findIndex((number) => number > 3)); // 3번 인덱스, 주어진 판별 함수를 만족하는 첫번째 요소의 인덱스 값을 반환, 찾지 못하면 -1 반환
 
 // * 배열 요소를 수정
-// fill(), slice(), splice(), join(), concat(), filter(), reduce()
+// # fill(), slice(), splice(), join(), concat(), filter(), reduce()
 
 const arr5 = [1, 2, 3, 4, 5];
 
