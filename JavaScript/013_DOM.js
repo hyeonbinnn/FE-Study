@@ -1,7 +1,7 @@
 // * DOM - Document Object Model
 // HTML, XML 같은 문서의 요소들을 계층적으로 표현해서 생성, 수정, 삭제 등 조작이 가능하게 해주는 하나의 인터페이스
 
-// * id값을 통해서 요소를 선택하는 방법
+// * id 값을 통해서 요소를 선택하는 방법
 // const title = document.getElementsById('title-id');
 
 // * class 이름을 통해서 요소를 선택하는 방법

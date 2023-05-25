@@ -10,10 +10,10 @@ console.log(arr); // 요소 끝에 추가
 arr.pop();
 console.log(arr); // 요소 삭제, 끝에서부터 하나의 요소를 제거하고 반환
 
-arr.unshift(10, 20, 30); // 앞부분에 추가
+arr.unshift(10, 20, 30); // 앞부분에 요소 추가
 console.log(arr);
 
-arr.shift(); // 앞부분 삭제
+arr.shift(); // 앞부분 요소 삭제
 console.log(arr);
 
 // * 주어진 함수를 배열 요소에 각각 실행

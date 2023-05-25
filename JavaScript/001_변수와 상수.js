@@ -1,14 +1,14 @@
-// 변수 = var
+// * 변수 = var
 var abc = '철수';
 var abc = '영희'; // 재선언 o, 재할당 o
 console.log(abc);
 
-// 변수 = let (값을 변경할 경우)
+// * 변수 = let (값을 변경할 경우)
 let hi = '철수';
 hi = '영희'; // 재선언 x, 재할당 o
 console.log(hi);
 
-// 상수 = const (값을 변경하지 않을 경우)
+// * 상수 = const (값을 변경하지 않을 경우)
 const hello = '철수'; // 재선언 x, 재할당 x
 console.log(hello);
 
