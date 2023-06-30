@@ -82,6 +82,6 @@ switch (num % 2) {
     console.log('짝수!');
     break;
   case 1:
-    connsole.log('홀수!');
+    console.log('홀수!');
     break;
 }
