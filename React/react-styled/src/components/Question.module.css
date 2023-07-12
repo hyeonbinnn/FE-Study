@@ -1,0 +1,33 @@
+/* div {
+  background: rgb(255, 220, 226);
+  margin: 30px;
+  padding: 30px;
+}
+
+h2 {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(132, 196, 153);
+}
+
+p {
+  font-weight: bold;
+} */
+
+.box {
+  background: rgb(255, 220, 226);
+  margin: 30px;
+  padding: 30px;
+}
+
+.text {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(132, 196, 153);
+}
+
+p {
+  font-weight: bold;
+}

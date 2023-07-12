@@ -1,17 +1,17 @@
 import React from 'react';
 import Example from './components/Example';
-import normalize from 'styled-normalize';
 import { createGlobalStyle } from 'styled-components';
+import { reset } from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-${normalize}
+${reset}
 
 div {
   padding: 30px;
 }
 
 span {
-  color: hotpink;
+  color: pink;
   font-size: 18px;
   font-weight: bold;
 }
@@ -21,11 +21,9 @@ button {
   border: none;
   margin-top: 20px;
   cursor: pointer;
+  padding: 5px;
   background-color: pink;
-}
-
-* {
-  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
 `;
 
