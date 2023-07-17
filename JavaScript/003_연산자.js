@@ -1,4 +1,19 @@
+// * 할당연산
+let z = 10;
+z = z + 10;
+z += 10;
+
+// * 단항연산
+console.log(-2);
+console.log(-(-2));
+console.log(+-2);
+console.log(+(+2));
+console.log(+(+'2'));
+
 // * 산술 연산자 (+, -, *, /, %, **)
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
 console.log(10 / 5); // 2 몫 값
 console.log(10 % 5); // 0 나머지 값
 console.log(2 ** 3); // 8 2의 3승
@@ -9,12 +24,27 @@ number++;
 console.log(number); // 11
 number--;
 console.log(number); // 10
+++number; // 선증가 후할당
+--number;
+number++; // 선할당 후증가
+number--;
 
 // * 비교 연산자 (<>, <=, >=, ==, ===, !==)
 const a = 123;
 const b = '123';
-console.log(a == b); // true (추상 비교)
-console.log(a === b); // false (엄격 비교)
+console.log(a == b); // true (추상 비교), 변수의 type 확인하지 않음
+console.log(a === b); // false (엄격 비교), 권장, 변수의 type 확인, 1. 견고한 코딩, 2. 성능상
+
+const x = 3;
+const y = 7;
+console.log(x > y);
+console.log(x >= y);
+console.log(x < y);
+console.log(x <= y);
+console.log(x != y);
+console.log(x !== y);
+console.log(3 != '3'); // false
+console.log(3 !== '3'); // true
 
 const c = 10;
 const d = 20;
@@ -34,6 +64,21 @@ console.log(!e); // false (원래 값은 true지만 부정함)
 console.log(2 < 3 ? '참' : '거짓'); // 참
 console.log(2 > 3 ? '참' : '거짓'); // 거짓
 
+// 3항 연산자 실습
+// 통장에 10000원 초과해서 있으면 '부자'
+// 통장에 10000원 이하 있으면 '부를 바라는 자'
+const money = 5000;
+const result = money > 10000 ? '부자' : '부를 바라는 자';
+console.log(result);
+
+// 3항 연산자 실습
+// 통장에 100000원 초과해서 있으면 '초부자'
+// 통장에 10000원 초과해서 있으면 '부자'
+// 통장에 10000원 이하 있으면 '부를 바라는 자'
+const money2 = 100001;
+const result2 = money2 > 10000 ? '🤑 초부자' : money2 > 10000 ? '😎 부자' : '😢 부를 바라는 자';
+console.log(result2);
+
 // * nullish 연산자 (??)
 // 여러 개의 피연사자 중 값이 확정되어 있는 변수를 찾음
 const g = undefined;
@@ -44,6 +89,12 @@ console.log(g ?? h ?? i); // 철수
 // * 비트 연산자 (&, |, ~, ^, <<, >>)
 // 자바스크립트에서는 거의 사용하지 않음
 // 뭐가 있는지 알고만 있자
+console.log(~3);
+console.log(~~3);
+console.log(~~3.14); // 알고리즘 풀이에서 많이 사용
+console.log(parseInt(3.14));
+console.log(parseInt('3.14'));
+console.log(parseInt('3.14abc'));
 
 // * 대입 연산자 (=)
 // 복합 대입 연산자 (+=, -=, *=, /=, %=, **=)

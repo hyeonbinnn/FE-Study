@@ -37,3 +37,27 @@ const obj2 = {
   },
 };
 console.log(obj2);
+
+// * 형변환(다른 type -> number)
+console.log(+'10');
+console.log(Number('10')); // 권하지 않음
+console.log(parseInt('10')); // 권장
+console.log(parseInt('10.1')); // 권장
+console.log(parseInt(true)); // NaN
+console.log(parseInt(false)); // NaN
+console.log(Number(true)); // 1
+console.log(Number(false)); // 0
+
+// * 형변환(다른 type -> string)
+let hyeonbin = 10;
+console.log(hyeonbin.toString()); // 권장, 10.toString() 10.까지를 소숫점으로 봄
+console.log('' + 10);
+console.log(String(10));
+
+// * 형변환(다른 type -> boolean)
+let hojun2 = 10;
+console.log(Boolean(-1));
+console.log(Boolean(0));
+console.log(Boolean(1000));
+console.log(!!1000);
+console.log(!!hojun2);

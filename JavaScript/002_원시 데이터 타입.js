@@ -18,6 +18,14 @@ console.log(msg);
 const msg2 = `저는 ${job}이고, ${age}살 입니다.`;
 console.log(msg2);
 
+// 이스케이프 문자
+// \'	작은따옴표
+// \"	큰따옴표
+// \t	가로 탭
+// \n	줄 바꿈
+console.log(typeof 'hello');
+console.log('h\ne\nl\nl\no');
+
 // * number
 const number = 123;
 console.log(typeof number);
