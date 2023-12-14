@@ -1,0 +1,67 @@
+h1,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.l_wrapper {
+  width: auto;
+  max-width: 800px;
+  margin: 100px auto;
+}
+
+.section-timeline {
+  margin: 0 -20px;
+}
+
+.section-timeline li {
+  width: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.section h1 {
+  margin-bottom: 30px;
+}
+
+.section-timeline {
+  position: relative;
+}
+
+.section-timeline::before {
+  content: "wow";
+  background-color: red;
+  position: absolute;
+  /* 4개 단축 속성 inset: 0; */
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  margin: 0 auto -100px;
+}
+
+.section-timeline li:nth-child(even) {
+  margin-left: auto;
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+.year {
+  background-color: orange;
+  padding: 40px;
+  min-height: 120px;
+  border-radius: 40px;
+}
+
+@media (max-width: 800px) {
+  .section-timeline li,
+  .section-timeline li:nth-child(even) {
+    width: auto;
+    margin: 0 0 20px 0;
+  }
+}

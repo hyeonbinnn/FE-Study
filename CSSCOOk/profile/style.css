@@ -1,0 +1,73 @@
+h1,
+h2,
+ul,
+p {
+  margin: initial;
+  padding: initial;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  background-image: url(images/background.gif);
+}
+
+.wrapper {
+  background-color: #ddd;
+  /* 프로퍼티는 모두 초기값(initial value)이 설정되어 있음! */
+  width: 800px;
+  margin: 40px auto;
+  /* h1은 가운데 정렬이 된 적 없다, block 요소라서 내부 인라인 텍스트만 가운데 정렬!! = contents, footer */
+  text-align: center;
+}
+
+.header {
+  background-image: url(images/cover03.png);
+  background-size: cover;
+  color: white;
+  padding: 50px 0;
+}
+
+.header img.profile {
+  width: 150px;
+  border: 8px solid white;
+  border-radius: 0 40px 40px 0;
+}
+
+.header h1 {
+  border-bottom: 4px solid currentColor;
+  width: 200px;
+  margin: 30px auto;
+}
+
+.contents {
+  text-align: left;
+}
+
+.section {
+  background-image: url(./images/icon-information.png);
+  background-repeat: no-repeat;
+  background-position: right 40px center;
+  background-color: white;
+  margin: 30px;
+  padding: 30px;
+}
+
+.section h2 {
+  color: salmon;
+  margin-bottom: 20px;
+}
+
+.skills {
+  background-image: url(./images/icon-skills.png);
+}
+
+.footer {
+  background-color: #f4f4f4;
+}

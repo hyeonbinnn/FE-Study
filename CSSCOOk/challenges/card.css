@@ -1,0 +1,56 @@
+/* reset */
+h2,
+p {
+  margin: initial;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* layouts */
+.warpper {
+  width: 300px;
+  margin: 100px auto;
+}
+
+/* components */
+body {
+  background-image: url(./images/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.card {
+  color: white;
+}
+
+.card-cover {
+  margin: 0 auto;
+  display: block;
+}
+
+.card-contents {
+  border-radius: 10px 10px 30px 30px;
+  background-color: brown;
+  color: white;
+  background-color: #93572e;
+  background-image: url(./images/green.png);
+  /* no-repeat는 한 번, 늘렸을 때 같이 늘어나는 것은 repeat-x */
+  background-repeat: repeat-x;
+  padding: 64px 20px 20px 20px;
+  height: auto;
+  border-bottom: 10px solid #4a260b;
+  box-shadow: inset 0 -2px 20px rgb(0 0 0 / 0);
+}
+
+.card-contents h1 {
+  margin-bottom: 10px;
+}
+
+.card-contents p {
+  color: antiquewhite;
+  /* 문단 추가 시 유지보수 */
+  margin-bottom: 1.2em;
+}
