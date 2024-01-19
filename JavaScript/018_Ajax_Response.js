@@ -2,9 +2,9 @@
 
 // XMLHttpRequest 객체의 생성
 var xhr = new XMLHttpRequest();
-// 비동기 방식으로 Request를 오픈한다
+// 비동기 방식으로 Request를 오픈
 xhr.open('GET', 'data/test.json');
-// Request를 전송한다
+// Request를 전송
 xhr.send();
 
 // XMLHttpRequest.readyState 프로퍼티가 변경될 때마다 콜백함수 즉, 이벤트 핸들러가 호출됨
