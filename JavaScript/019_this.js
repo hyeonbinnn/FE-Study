@@ -104,3 +104,23 @@ function Example(name) {
 
 const instance = new Example('John');
 console.log(instance.name); // John
+
+// apply / call / bind에서의 this
+function example(num1, num2) {
+  console.log(this.name, num1 + num2);
+}
+const person = {
+  name: 'Kim',
+};
+example.call(person, 1, 2); // Kim 3
+example.apply(person, [1, 6]); // Kim 7
+
+const newExample = example.bind(person);
+newExample(10, 2); // kim 12
+
+// 이벤트 핸들러 안에서의 this
+const btn = document.querySelector('#btn');
+
+btn.addEventListener('click', function () {
+  console.log(this); // this는 클릭된 button을 가리킴
+});
