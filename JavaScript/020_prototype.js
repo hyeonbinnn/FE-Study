@@ -1,21 +1,19 @@
 // 1. 프로토타입
-// 프로토타입 객체 생성
-// const carPrototype = {
-//   color: function () {
-//     console.log('black color');
-//   },
-// };
+const carPrototype = {
+  color: function () {
+    console.log('black color');
+  },
+};
 
-// function Car() {}
+function Car() {}
 
-// Car.prototype = carPrototype;
+Car.prototype = carPrototype;
 
-// const miniCar = new Car();
+const miniCar = new Car();
 
-// miniCar.color(); // 출력: black color
+miniCar.color(); // 출력: black color
 
 // 2. prototype 프로퍼티
-// 생성자 함수
 function Car(make, model) {
   this.make = make;
   this.model = model;
