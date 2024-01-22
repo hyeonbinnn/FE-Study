@@ -167,7 +167,6 @@ const me9 = new Me9(123);
 console.log(me9.staticMethod()); // TypeError: me.staticMethod is not a function
 
 // 8. 클래스 상속
-// extends 키워드
 // 부모 클래스
 class Me10 {
   constructor(name) {
@@ -242,3 +241,66 @@ console.log(Mee12.staticMethod()); // 출력: 나는 덕배 하이!
 
 console.log(new Mee12().prototypeMethod());
 // TypeError: (intermediate value).staticMethod is not a function
+
+// 10. 오버라이딩
+// 부모 클래스
+class Me13 {
+  sayHoo() {
+    console.log('나는 덕배');
+  }
+}
+
+// 자식 클래스
+class Mee13 {
+  // 부모 클래스의 메소드를 오버라이딩
+  sayHoo() {
+    console.log('나는 덕수');
+  }
+}
+
+// 인스턴스 생성
+const me13 = new Mee13();
+
+// 오버라이딩된 메소드 호출
+me13.sayHoo(); // 출력: 나는 덕수
+
+// 11. 오버로딩
+// 함수 오버로딩을 시뮬레이션하기 위해 arguments 객체 사용
+function add() {
+  if (arguments.length === 2) {
+    return arguments[0] + arguments[1];
+  } else if (arguments.length === 3) {
+    return arguments[0] + arguments[1] + arguments[2];
+  } else {
+    console.error('인수 개수 잘못됨');
+  }
+}
+
+// 오버로딩된 함수 호출
+console.log('1:', add(2, 3)); // 출력: 5
+console.log('2:', add(2, 3, 4)); // 출력: 9
+console.log('3:', add(2, 3, 4, 5)); // 출력: 인수 개수 잘못됨 undefined
+
+// 12. 접근 제어자
+// class Me {
+//   name; // public
+//   protected age;
+//   private email;
+
+//   constructor(name, age, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.email = email;
+//   }
+
+//   getAge() {
+//     return this.age; // protected 멤버는 클래스 내부에서 접근 가능
+//   }
+// }
+
+// const me = new Me('덕배', 30, 'duckbae@gmail.com')
+
+// console.log(me.name);     // 덕배
+// console.log(me.age);      // Error: age is protected
+// console.log(me.email);    // Error: email is private
+// console.log(me.getAge()); // 30
