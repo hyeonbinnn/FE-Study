@@ -1,10 +1,9 @@
-var Start = /** @class */ (function () {
-    function Start() {
-    }
-    Start.main = function () {
+"use strict";
+class Start {
+    static main() {
         console.log('시작하자!');
         return 0;
-    };
-    return Start;
-}());
+    }
+}
 Start.main();
+//# sourceMappingURL=test.js.map

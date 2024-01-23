@@ -10,3 +10,4 @@ class Teacher {
     }
 }
 exports.Teacher = Teacher;
+//# sourceMappingURL=teacher.js.map

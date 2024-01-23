@@ -1,11 +1,12 @@
-var Me = /** @class */ (function () {
-    function Me(name) {
-        this.name = name;
-    }
-    Me.prototype.sayHoo = function () {
-        return '안녕~' + this.name;
-    };
-    return Me;
-}());
-var me = new Me('덕배');
+'use strict';
+class Me {
+  constructor(name) {
+    this.name = name;
+  }
+  sayHoo() {
+    return '안녕~' + this.name;
+  }
+}
+const me = new Me('덕배');
 console.log(me.sayHoo());
+//# sourceMappingURL=index.js.map
