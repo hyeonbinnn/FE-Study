@@ -1,0 +1,38 @@
+{
+  // TypeScript 컴파일러의 옵션들을 지정하는 속성
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "sourceMap": true
+  }
+
+  // 컴파일할 파일들의 개별 목록을 지정하는 속성
+  // "files": ["src/main.ts", "src/utils.ts"],
+
+  // 컴파일할 파일들을 지정하는 속성 (와일드 카드 패턴으로 묶어 표현)
+  // "include": ["src/**/*.ts"],
+
+  // 컴파일 대상에서 제외할 파일들을 지정하는 속성
+  // "exclude": ["node_modules", "**/*.test.ts"],
+
+  // 다른 tsconfig.json 파일을 상속받아서 설정을 재사용할 수 있게 해주는 속성
+  // "extends": "./configs/base.json",
+
+  // 여러 개의 하위 프로젝트로 구성된 프로젝트의 의존 관계를 지정하는 속성
+  // "references": [{ "path": "./subproject1" }, { "path": "./subproject2" }],
+
+  // 타입 습득(type acquisition)과 관련된 옵션들을 지정하는 속성
+  // "typeAcquisition": {
+  //   "enable": true,
+  //   "include": ["jquery"],
+  //   "exclude": ["react"]
+  // },
+
+  // watch 모드와 관련된 옵션들을 지정하는 속성
+  // "watchOptions": {
+  //   "watchFile": "useFsEvents",
+  //   "watchDirectory": "useFsEvents",
+  //   "fallbackPolling": "dynamicPriority"
+  // }
+}
