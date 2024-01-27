@@ -1,4 +1,4 @@
-// 예제
+// 인터페이스 예제
 interface personAge {
   age: number;
 }
