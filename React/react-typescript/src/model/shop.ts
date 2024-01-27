@@ -1,18 +1,3 @@
-// let data = {
-//   name: 'shop-shop',
-//   category: 'goods',
-//   address: {
-//     city: 'seoul',
-//     detail: 'mapo',
-//     zipCode: 10192109212,
-//   },
-//   menu: [
-//     { name: 'lip', price: 5000, category: 'cosmetics' },
-//     { name: 'character cup', price: 10000, category: 'life' },
-//     { name: 'phone case', price: 20000, category: 'life' },
-//   ],
-// };
-
 export type Shop = {
   name: string;
   category: string;
