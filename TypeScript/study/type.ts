@@ -105,3 +105,8 @@ function error(message: '나는 에러'): never {
 }
 // 이 함수를 호출하면 예외가 발생하고, 함수가 반환하지 않음
 error('나는 에러');
+
+// 13. 타입 정의 d.ts
+export function me(name: string) {
+  console.log(`${name} 하이!`);
+}
