@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { sale, soldOut } from './../redux/actions/actions';
+import { sale, soldOut } from './../redux/slices/slices';
 
 const StockCounter = () => {
   // useSelector : store의 상태 조회 Hook
   const { stock } = useSelector((state) => ({
-    stock: state.goodsReducer.stock,
+    stock: state.goods.stock, // 슬라이스 이름으로 변경
   }));
 
   // useSelector : store의 상태 조회 Hook
   const { message } = useSelector((state) => ({
-    message: state.stockReducer.message,
+    message: state.stock.message, // 슬라이스 이름으로 변경
   }));
 
   // useDispatch : store의 dispatch를 함수 내부에서 사용할 수 있는 Hook
@@ -22,7 +22,7 @@ const StockCounter = () => {
     } else {
       dispatch(sale());
     }
-  }, [stock]);
+  }, [stock, dispatch]);
 
   return (
     <>

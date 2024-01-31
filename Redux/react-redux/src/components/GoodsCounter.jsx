@@ -1,28 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
-import { plusNumber, minusNumber } from './../redux/actions/actions';
+import { plus, minus } from './../redux/slices/slices';
 
 const GoodsCounter = () => {
-  // useSelector : store의 상태 조회 Hook
   const { stock, goods } = useSelector((state) => ({
-    stock: state.goodsReducer.stock,
-    goods: state.goodsReducer.goods,
+    stock: state.goods.stock, // 슬라이스 이름으로 변경
+    goods: state.goods.goods, // 슬라이스 이름으로 변경
   }));
   console.log(stock, goods);
 
-  // useDispatch : store의 dispatch를 함수 내부에서 사용할 수 있는 Hook
   const dispatch = useDispatch();
 
-  const onPlusNumber = () => {
+  const onPlus = () => {
     if (stock > 0) {
-      dispatch(plusNumber());
+      dispatch(plus());
     }
   };
 
-  const onMinusNumber = () => {
+  const onMinus = () => {
     if (goods > 0) {
-      dispatch(minusNumber());
+      dispatch(minus());
     }
   };
 
@@ -33,11 +31,11 @@ const GoodsCounter = () => {
         <strong>50,000</strong>원
       </span>
       <div>
-        <Button type="button" onClick={onMinusNumber} disabled={goods <= 0}>
+        <Button type="button" onClick={onMinus} disabled={goods <= 0}>
           -
         </Button>
         <span>{goods}</span>
-        <Button type="button" onClick={onPlusNumber} disabled={stock <= 0}>
+        <Button type="button" onClick={onPlus} disabled={stock <= 0}>
           +
         </Button>
       </div>
