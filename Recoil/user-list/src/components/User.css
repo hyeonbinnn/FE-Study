@@ -1,0 +1,30 @@
+.add-btn {
+  background-color: black;
+  color: white;
+  margin-left: 10px;
+  border-radius: 3px;
+  font-size: 30px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.add-input {
+  padding: 5px;
+  width: 183px;
+  height: 20px;
+}
+
+.add-form {
+  display: flex;
+}
+
+.add-ul {
+  width: 200px;
+  height: 400px;
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  border-radius: 5px;
+}
