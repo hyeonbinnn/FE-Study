@@ -51,20 +51,30 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.comparePassword = async function (plainPassword) {
   try {
     return await bcrypt.compare(plainPassword, this.password);
-  } catch (err) {
-    throw err;
+  } catch (error) {
+    throw error;
   }
 };
 
 userSchema.methods.generateToken = async function () {
   try {
     // jsonwebtoken을 이용해서 token을 생성하기
-    const token = jwt.sign(this._id.toHexString(), process.env.JWT_SECRET_KEY);
+    const token = jwt.sign({ userId: this._id.toHexString() }, 'secretToken');
     this.token = token;
     await this.save();
     return token;
   } catch (err) {
     throw err;
+  }
+};
+
+userSchema.statics.findByToken = async function (token) {
+  try {
+    const decoded = jwt.verify(token, 'secretToken');
+    const user = await this.findOne({ _id: decoded.userId, token: token });
+    return user;
+  } catch (error) {
+    throw error;
   }
 };
 
