@@ -19,7 +19,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.get('/', (req, res) => {
-  res.send('Hello World! 이리오너라! 꺼져랐!');
+  res.send('Hello World! 이리오너라!');
 });
 
 app.post('/register', async (req, res) => {
