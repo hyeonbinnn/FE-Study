@@ -4,6 +4,8 @@ const port = 5000;
 const bodyParser = require('body-parser');
 const { User } = require('./models/User');
 
+const config = require('./config/key');
+
 // 서버에서 분석해서 가져오기
 // application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -12,14 +14,12 @@ app.use(bodyParser.json());
 
 const mongoose = require('mongoose');
 mongoose
-  .connect(
-    'mongodb+srv://hyeonbinnn:abcd1234@cluster0.9bcslpt.mongodb.net/?retryWrites=true&w=majority'
-  )
+  .connect(config.mongoURI)
   .then(() => console.log('MongoDB Connected...'))
   .catch((err) => console.log(err));
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello World! 이리오너라! 꺼져랐!');
 });
 
 app.post('/register', async (req, res) => {
