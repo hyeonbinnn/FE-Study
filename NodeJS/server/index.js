@@ -26,6 +26,10 @@ mongoose
 
 app.get('/', (req, res) => res.send('Hello World! 이리오너라!'));
 
+app.get('/api/hello', (req, res) => {
+  res.send('헬로우 미스터 정');
+});
+
 app.get('/api/greet', (req, res) => {
   res.send('안녕, 나는 정저저저저저저저정쓰');
 });
