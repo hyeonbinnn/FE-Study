@@ -43,10 +43,10 @@ function printChristmasTree(height) {
   }
 }
 
-// 트리의 높이를 지정합니다.
+// 트리의 높이를 지정
 let treeHeight = 5;
 
-// 크리스마스 트리를 출력합니다.
+// 크리스마스 트리를 출력
 printChristmasTree(treeHeight);
 
 // 출력
