@@ -27,6 +27,8 @@ console.log(tree);
 //  *******
 // *********
 
+// 또는
+
 function printChristmasTree(height) {
   // 트리의 높이만큼 반복
   for (let i = 1; i <= height; i++) {
