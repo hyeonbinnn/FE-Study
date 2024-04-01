@@ -51,6 +51,7 @@ console.log(objOne); // { one: 3 }
 var str = 'hello world';
 console.log(str.length);
 
+// * 오토박싱
 // 원시 타입을 객체처럼 사용하는 순간, 자바스크립트 내부에서 사용하는 데이터의 인스턴스를 만들게 됨
 // 이렇게 만들어진 객체는 코드를 실행 후 바로 다음 줄에서 파괴됨 => 오토박싱
 var name = 'bit';

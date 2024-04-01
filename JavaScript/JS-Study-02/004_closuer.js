@@ -43,7 +43,7 @@ var person = (function () {
   var age = 15;
 
   return {
-    name: 'kin',
+    name: 'kim',
 
     getAge: function () {
       console.log(age);
