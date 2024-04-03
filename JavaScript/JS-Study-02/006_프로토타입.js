@@ -59,5 +59,5 @@ console.log(myFood.smell === myFood2.smell); // true
 // * 프로토타입 체인
 // 인스턴스의 생성자의 [[Prototype]]을 타고 올라가며 프로퍼티를 탐색하는 현상을 프로토타입 체인이라고 함
 
-// 위 예시를 보면 myFood와 myFood2 인스턴스는 [[Prototype]] 프로퍼티를 가지고 있고, 내부의 내용은 부모 Food 생성자의 prototype(smell)을 참조하고 있음
+// 위 예시를 보면 myFood와 myFood2 인스턴스는 [[Prototype]] 프로퍼티를 가지고 있고, 부모 Food 생성자의 prototype(smell)을 참조하고 있음
 // 그리고 부모 Food 생성자의 [[Prototype]] 프로퍼티도 Object의 prototype(constructor)을 참조하고 있음
