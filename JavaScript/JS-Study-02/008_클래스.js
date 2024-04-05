@@ -41,7 +41,7 @@ class Food {
 }
 
 var food = new Food('치킨', '해산물');
-console.log(food.taste()); // 치킨과 해산물맛이 난다!
+console.log(food.taste()); // 치킨과 해산물 맛이 난다!
 
 // 자식 클래스
 // 슈퍼 타입의 생성자를 호출 -> 슈퍼 타입은? 부모!
@@ -56,5 +56,5 @@ class NewFood extends Food {
 }
 
 var newFood = new NewFood('밥', '카레', '불맛');
-console.log(newFood.taste()); // 밥과 카레맛이 난다!
+console.log(newFood.taste()); // 밥과 카레 맛이 난다!
 console.log(newFood.flavor()); // 불맛의 맛도 나네~
