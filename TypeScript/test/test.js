@@ -6,3 +6,4 @@ class Start {
     }
 }
 Start.main();
+//# sourceMappingURL=test.js.map

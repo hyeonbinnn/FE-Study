@@ -9,3 +9,4 @@ class Me {
 }
 const me = new Me('덕배');
 console.log(me.sayHoo());
+//# sourceMappingURL=index.js.map

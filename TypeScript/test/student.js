@@ -9,3 +9,4 @@ class Student extends teacher_1.Teacher {
 const student = new Student('덕배');
 console.log(student.sayHoo());
 console.log(student.study());
+//# sourceMappingURL=student.js.map
