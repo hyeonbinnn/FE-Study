@@ -58,4 +58,5 @@ const son = {
     grade: 3,
     phone: '010-1234-1234',
 };
+console.log(son);
 //# sourceMappingURL=interface.js.map

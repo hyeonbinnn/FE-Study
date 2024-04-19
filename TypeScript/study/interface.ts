@@ -125,3 +125,4 @@ const son: Son = {
   grade: 3,
   phone: '010-1234-1234',
 };
+console.log(son);
