@@ -1,14 +1,46 @@
 body {
   margin: 0;
-  background: #262739;
+  background: #1d1e2e;
   color: white;
 }
 
 .title {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 .title-sub {
   text-align: center;
+}
+
+.food {
+  margin: 20px auto;
+  width: 200px;
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.navBar {
+  background-color: white;
+  padding: 20px;
+}
+
+.navBar a {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.food-img {
+  width: 100%;
+  height: auto;
+}
+
+.cart-item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  line-height: 0px;
 }
