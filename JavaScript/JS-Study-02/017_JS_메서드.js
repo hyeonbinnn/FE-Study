@@ -9,7 +9,7 @@ let arr = [10, 2, 3, 22, 33, 100, 11];
 let arrTwo = [10, 2, 3, 22, 33, 100, 11];
 console.log(arr.concat(arrTwo));
 
-// stack - LIFO
+// stack
 console.log(arr);
 console.log(arr.pop());
 console.log(arr);
