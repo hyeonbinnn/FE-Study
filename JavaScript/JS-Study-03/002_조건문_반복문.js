@@ -61,7 +61,7 @@ for (let l in lists) {
   console.log(l, lists[l]);
 }
 
-// for of(배열 순회)
+// for of (배열 순회)
 const lists2 = [1, 2, 3, 4, 5];
 
 for (let l2 of lists2) {
